@@ -37,10 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'CustomAuthenticated',
     'Todo.apps.TodoConfig',
     'rest_framework',
     'django_celery_results',
-    'usertimestamp'
+    'usertimestamp',
+    'rest_framework_simplejwt'
+    
 
 ]
 
@@ -150,5 +153,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'document')
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS':
-            'TodoProject.pagination.Custom_Paging'
+            'TodoProject.pagination.Custom_Paging',
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        )
+
 }
+
+AUTH_USER_MODEL = 'CustomAuthenticated.User'

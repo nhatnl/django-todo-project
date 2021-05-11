@@ -1,10 +1,10 @@
 
 from django.db import models
-from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy 
 
 
 from usertimestamp.models import UserTimeStamp
+from CustomAuthenticated.models import User
 
 # class UserTimeStamp(models.Model):
 #     created_at = models.DateTimeField(auto_now_add=True)
