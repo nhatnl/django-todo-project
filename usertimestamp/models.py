@@ -1,5 +1,5 @@
 from django.db import models
-from CustomAuthenticated.models import User
+from custom_authentication.models import User
 
 
 # Create your models here.
